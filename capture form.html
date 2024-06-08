@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Name Capture Form</title>
+   </head>
+  <body>
+    <div class="container">
+      <h1>Enter Your Name</h1>
+      <form method="POST" action="/">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      
+          <ul class="flashes">
+          
+            <li class="alert alert-{{ category }}"></li>
+          
+          </ul>
+        
+    </div>
+  </body>
+</html>
