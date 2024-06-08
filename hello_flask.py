@@ -1,11 +1,10 @@
-from flask import Flask, render_template, request
-app = Flask(__name__)
-@app.route("/inputpage")
-def inputpage():  
-    return render_template("inputpage.html")
-@app.route('/statuspage', methods=['GET'])
-def ststuspage():
-    staus = request.args.get('textinput')
-    return render_template('statuspage.html', status=status)
-if __name__ == "__main__": 
+from flask import Flask, render_template
+app = Flask(_name_)
+@app.route('/dashboard')
+def dashboard():
+    name = "Anand"
+    notification = 4
+    mail = 3
+    return render_template('dashboard.html', name_temp=name, notification_temp=notification, mail_temp=mail)
+if _name_ == '_main_':
     app.run(debug=True)
