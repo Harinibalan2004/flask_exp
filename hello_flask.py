@@ -1,16 +1,11 @@
-from flask import Flask, render_template, redirect
-import determine
+from flask import Flask, render_template, request
 app = Flask(__name__)
-@app.route("/frontpage")
-def frontpage  
-    return render_template("frontpage.html")
-@app.route("/resultpage")
-def resultpage():
-    return render_template("resultpage.html")
-@app.route("/printtime")
-def printtime():
-    current_time = datetime.datetime.now()
-    print(f"current DateTime: {current_time}")
-    return redirect("/resultpage")
+@app.route("/inputpage")
+def inputpage():  
+    return render_template("inputpage.html")
+@app.route('/statuspage', methods=['GET'])
+def ststuspage():
+    staus = request.args.get('textinput')
+    return render_template('statuspage.html', status=status)
 if __name__ == "__main__": 
     app.run(debug=True)
